@@ -1,0 +1,80 @@
+/*
+* for config
+ */
+var productWatchedKey = 'productWatchedKey';
+var storageSize = {};
+	storageSize[productWatchedKey] = 3;
+/*
+for helper
+ */
+
+
+var storeHelper = {
+	encode: function () {},
+	decode: function () {},
+	get: function () {},
+	set: function () {},
+}
+
+storeHelper.encode = function (data) {
+	return JSON.stringify(data);
+}
+
+storeHelper.decode = function (data) {
+	return JSON.parse(data);
+}
+
+storeHelper.set = function (key, value) {
+	return localStorage.setItem(key, value);
+}
+
+storeHelper.get = function (key) {
+	return localStorage.getItem(key);
+}
+storeHelper.getObject = function (key) {
+	var data =  localStorage.getItem(key);
+	return storeHelper.decode(data);
+}
+
+function processLocalStore(key, data) {
+
+	var dataStore = storeHelper.getObject(key);
+	var exist = 0;
+
+	if(dataStore === undefined || dataStore == '' || dataStore === null) {
+		storeHelper.set(key, storeHelper.encode([data]));
+		return ;
+	}
+
+	$.each(dataStore, function( index, value ) {
+
+		if(value['id'] == data['id']) {
+			exist = 1;
+		}
+	});
+
+	if(exist == 1) {
+		return;
+	}
+
+	dataStore.unshift(data);
+
+	if( dataStore.length > storageSize[key] ){
+		dataStore.pop();
+	}
+
+	storeHelper.set(key, storeHelper.encode(dataStore));
+}
+
+function addCommas(nStr)
+{
+	nStr += '';
+	x = nStr.split('.');
+	x1 = x[0];
+	x2 = x.length > 1 ? '.' + x[1] : '';
+	var rgx = /(\d+)(\d{3})/;
+	while (rgx.test(x1)) {
+		x1 = x1.replace(rgx, '$1' + ',' + '$2');
+	}
+	return x1 + x2;
+}
