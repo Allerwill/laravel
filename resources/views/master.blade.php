@@ -1,313 +1,184 @@
-<?php
-session_start();
-
-?>
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<head>
+    <title>Vegefoods - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<title>Áo Thun Ngành</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
 
-		<!-- Google font -->
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
 
-		<!-- Bootstrap -->
-		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
 
-		<!-- Slick -->
-		<link type="text/css" rel="stylesheet" href="css/slick.css"/>
-		<link type="text/css" rel="stylesheet" href="css/slick-theme.css"/>
+    <link rel="stylesheet" href="css/aos.css">
 
-		<!-- nouislider -->
-		<link type="text/css" rel="stylesheet" href="css/nouislider.min.css"/>
+    <link rel="stylesheet" href="css/ionicons.min.css">
 
-		<!-- Font Awesome Icon -->
-		<link rel="stylesheet" href="css/font-awesome.min.css">
-
-		<!-- Custom stlylesheet -->
-		<link type="text/css" rel="stylesheet" href="css/style.css"/>
-		<link type="text/css" rel="stylesheet" href="css/accountbtn.css"/>
-		
-		
-		
-         
-		
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
-    <style>
-        #navigation {
-          background: #FF4E50;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #F9D423, #FF4E50);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #F9D423, #FF4E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-          
-        }
-        #header {
-  
-            background: #780206;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #061161, #780206);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #061161, #780206); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  
-        }
-        #top-header {
-              
-  
-            background: #870000;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #190A05, #870000);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #190A05, #870000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
 
 
-        }
-        #footer {
-            background: #7474BF;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #348AC7, #7474BF);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #348AC7, #7474BF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-          color: #1E1F29;
-        }
-        #bottom-footer {
-            background: #7474BF;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #348AC7, #7474BF);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #348AC7, #7474BF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-          
-
-        }
-        .footer-links li a {
-          color: #1E1F29;
-        }
-        .mainn-raised {
-            
-            margin: -7px 0px 0px;
-            border-radius: 6px;
-            box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-
-        }
-       
-        .glyphicon{
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    }
-    .glyphicon-chevron-left:before{
-        content:"\f053"
-    }
-    .glyphicon-chevron-right:before{
-        content:"\f054"
-    }
-        
-
-       
-        
-        </style>
-
-    </head>
-	<body>
-		<!-- HEADER -->
-		<header>
-			<!-- TOP HEADER -->
-			<div id="top-header">
-				<div class="container">
-					<ul class="header-links pull-left">
-						<li><a href="#"><i class="fa fa-phone"></i> 0939 506 264</a></li>
-						<li><a href="#"><i class="fa fa-envelope-o"></i> aothunnganh@gmail.com</a></li>
-						<li><a href="#"><i class="fa fa-map-marker"></i>Hồ Chí Minh</a></li>
-					</ul>
-					<ul class="header-links pull-right">
-<!--						<li><a href="#"><i class="fa fa-en"></i> INR</a></li>-->
-						<li><?php
-                             include "db.php";
-                            if(isset($_SESSION["uid"])){
-                                $sql = "SELECT first_name FROM user_info WHERE user_id='$_SESSION[uid]'";
-                                $query = mysqli_query($con,$sql);
-                                $row=mysqli_fetch_array($query);
-                                
-                                echo '
-                               <div class="dropdownn">
-                                  <a href="#" class="dropdownn" data-toggle="modal" data-target="#myModal" ><i class="fa fa-user-o"></i> HI '.$row["first_name"].'</a>
-                                  <div class="dropdownn-content">
-                                    <a href="" data-toggle="modal" data-target="#profile"><i class="fa fa-user-circle" aria-hidden="true" ></i>My Profile</a>
-                                    <a href="logout.php"  ><i class="fa fa-sign-in" aria-hidden="true"></i>Log out</a>
-                                    
-                                  </div>
-                                </div>';
-
-                            }else{ 
-                                echo '
-                                <div class="dropdownn">
-                                  <a href="#" class="dropdownn" data-toggle="modal" data-target="#myModal" ><i class="fa fa-user-o"></i> Tài khoản</a>
-                                  <div class="dropdownn-content">
-                                    <a href="" data-toggle="modal" data-target="#Modal_login"><i class="fa fa-sign-in" aria-hidden="true" ></i>Đăng nhập</a>
-                                    <a href="" data-toggle="modal" data-target="#Modal_register"><i class="fa fa-user-plus" aria-hidden="true"></i>Đăng ký</a>
-                                    
-                                  </div>
-                                </div>';
-                                
-                            }
-                                             ?>
-                               
-                                </li>				
-					</ul>
-					
-				</div>
-			</div>
-			<!-- /TOP HEADER -->
-			
-			
-
-			<!-- MAIN HEADER -->
-			<div id="header">
-				<!-- container -->
-				<div class="container">
-					<!-- row -->
-					<div class="row">
-						<!-- LOGO -->
-						<div class="col-md-3">
-							<div class="header-logo">
-								<a href="#" class="logo">
-								<font style="font-style:normal; font-size: 33px;color: aliceblue;font-family: serif">
-                                        Áo Thun Ngành
-                                    </font>
-									
-								</a>
-							</div>
-						</div>
-						<!-- /LOGO -->
-
-						<!-- SEARCH BAR -->
-						<div class="col-md-6">
-							<div class="header-search">
-								<form>
-									<select class="input-select">
-										<option value="0">Danh mục</option>
-										<option value="1">Men</option>
-										<option value="1">Women </option>
-									</select>
-									<input class="input" id="search" type="text" placeholder="Tìm sản phẩm, thương hiệu (Ví dụ: áo thun, áo cặp,...)">
-									<button type="submit" id="search_btn" class="search-btn">Tìm Kiếm</button>
-								</form>
-							</div>
-						</div>
-						<!-- /SEARCH BAR -->
-
-						<!-- ACCOUNT -->
-						<div class="col-md-3 clearfix">
-							<div class="header-ctn">
-								<!-- Wishlist -->
-								<div>
-									<a href="https://facebook.com/Allerwill">
-										<i class="fa fa-facebook"></i>
-										<span>Facebook</span>
-										
-									</a>
-								</div>
-								<!-- /Wishlist -->
-
-								<!-- Cart -->
-								<div class="dropdown">
-									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-										<i class="fa fa-shopping-cart"></i>
-										<span>Giỏ hàng</span>
-										<div class="badge qty">0</div>
-									</a>
-									<div class="cart-dropdown"  >
-										<div class="cart-list" id="cart_product">
-										
-											
-										</div>
-										
-										<div class="cart-btns">
-												<a href="cart.php" style="width:100%;"><i class="fa fa-edit"></i>  edit cart</a>
-											
-										</div>
-									</div>
-										
-									</div>
-								<!-- /Cart -->
-
-								<!-- Menu Toogle -->
-								<div class="menu-toggle">
-									<a href="#">
-										<i class="fa fa-bars"></i>
-										<span>Menu</span>
-									</a>
-								</div>
-								<!-- /Menu Toogle -->
-							</div>
-						</div>
-						<!-- /ACCOUNT -->
-					</div>
-					<!-- row -->
-				</div>
-				<!-- container -->
-			</div>
-			<!-- /MAIN HEADER -->
-		</header>
-		<!-- /HEADER -->
-		<nav id='navigation'>
-			<!-- container -->
-            <div class="container" id="get_category_home">
-                
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="goto-here">
+<div class="py-1 bg-primary">
+    <div class="container">
+        <div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
+            <div class="col-lg-12 d-block">
+                <div class="row d-flex">
+                    <div class="col-md pr-4 d-flex topper align-items-center">
+                        <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+                        <span class="text">+ 1235 2355 98</span>
+                    </div>
+                    <div class="col-md pr-4 d-flex topper align-items-center">
+                        <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+                        <span class="text">youremail@email.com</span>
+                    </div>
+                    <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
+                        <span class="text">3-5 Business days delivery &amp; Free Returns</span>
+                    </div>
+                </div>
             </div>
-				<!-- responsive-nav -->
-				
-			<!-- /container -->
-		</nav>
-            
+        </div>
+    </div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.blade.php">Vegefoods</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+        </button>
 
-		<!-- NAVIGATION -->
-		
-		<div class="modal fade" id="Modal_login" role="dialog">
-                        <div class="modal-dialog">
-													
-                          <!-- Modal content-->
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <button type="button" class="close" data-dismiss="modal">&times;</button>
-                              
-                            </div>
-                            <div class="modal-body">
-                            <?php
-                                include "login_form.php";
-    
-                            ?>
-          
-                            </div>
-                            
-                          </div>
-													
-                        </div>
-                      </div>
-                <div class="modal fade" id="Modal_register" role="dialog">
-                        <div class="modal-dialog" style="">
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"><a href="index.blade.php" class="nav-link">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown04">
+                        <a class="dropdown-item" href="shop.html">Shop</a>
+                        <a class="dropdown-item" href="wishlist.html">Wishlist</a>
+                        <a class="dropdown-item" href="product-single.html">Single Product</a>
+                        <a class="dropdown-item" href="cart.html">Cart</a>
+                        <a class="dropdown-item" href="checkout.html">Checkout</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
 
-                          <!-- Modal content-->
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <button type="button" class="close" data-dismiss="modal">&times;</button>
-                              
-                            </div>
-                            <div class="modal-body">
-                            <?php
-                                include "register_form.php";
-    
-                            ?>
-          
-                            </div>
-                            
-                          </div>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- END nav -->
 
-                        </div>
-                      </div>
+    @yield('content')z
+
+<footer class="ftco-footer ftco-section">
+    <div class="container">
+        <div class="row">
+            <div class="mouse">
+                <a href="#" class="mouse-icon">
+                    <div class="mouse-wheel"><span class="ion-ios-arrow-up"></span></div>
+                </a>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Vegefoods</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4 ml-md-5">
+                    <h2 class="ftco-heading-2">Menu</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="py-2 d-block">Shop</a></li>
+                        <li><a href="#" class="py-2 d-block">About</a></li>
+                        <li><a href="#" class="py-2 d-block">Journal</a></li>
+                        <li><a href="#" class="py-2 d-block">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Help</h2>
+                    <div class="d-flex">
+                        <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
+                            <li><a href="#" class="py-2 d-block">Shipping Information</a></li>
+                            <li><a href="#" class="py-2 d-block">Returns &amp; Exchange</a></li>
+                            <li><a href="#" class="py-2 d-block">Terms &amp; Conditions</a></li>
+                            <li><a href="#" class="py-2 d-block">Privacy Policy</a></li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="py-2 d-block">FAQs</a></li>
+                            <li><a href="#" class="py-2 d-block">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Have a Questions?</h2>
+                    <div class="block-23 mb-3">
+                        <ul>
+                            <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+                            <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+                            <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+
+                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="js/google-map.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
