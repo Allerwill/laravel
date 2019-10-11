@@ -103,7 +103,12 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+=======
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Original-Shop" />
+>>>>>>> parent of c65903b... Update workplace
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
