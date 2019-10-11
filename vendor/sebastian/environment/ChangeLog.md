@@ -1,0 +1,17 @@
+la reproducción, la distribución, la instalación y el uso de Google Chrome únicamente en equipos destinados a su uso por parte de empleados, directores, representantes y agentes relacionados con la entidad empresarial, y siempre que dicho uso de Google Chrome esté sujeto a las Condiciones.</p>
+<p>12 de agosto de 2010</p>
+<br>
+<hr>
+<br>
+<h2>Condiciones del servicio adicionales de Google Chrome</h2>
+<p><strong>MPEGLA</strong></p>
+<p>ESTE PRODUCTO ESTÁ SUJETO A LA LICENCIA DE CARTERA DE PATENTES AVC PARA SU USO PERSONAL Y NO COMERCIAL POR PARTE DE UN CONSUMIDOR (i) PARA CODIFICAR VÍDEOS DE CONFORMIDAD CON EL ESTÁNDAR AVC (EN ADELANTE, "VÍDEOS AVC") O (ii) PARA DECODIFICAR VÍDEOS AVC CODIFICADOS POR UN CONSUMIDOR COMO PARTE DE UNA ACTIVIDAD DE CARÁCTER PERSONAL Y NO COMERCIAL U OBTENIDOS A PARTIR DE UN PARTNER CON LICENCIA PARA OFRECER VÍDEOS AVC. NO SE CONCEDE NINGÚN TIPO DE LICENCIA, NI EXPLÍCITA NI IMPLÍCITA, PARA NINGÚN OTRO USO. SI DESEA OBTENER INFORMACIÓN ADICIONAL, CONSULTE EL SITIO WEB DE MPEG LA, L.L.C. EN LA PÁGINA HTTP://WWW.MPEGLA.COM.</p>
+<p><strong>Adobe</strong></p>
+<p>Google Chrome podrá incluir uno o varios componentes proporcionados por Adobe Systems Incorporated y Adobe Software Ireland Limited (en adelante y de forma colectiva, "Adobe"). El uso que haga del software de Adobe proporcionado por Google (en adelante, el "Software de Adobe") estará sujeto a las siguientes condiciones adicionales (en adelante, las "Condiciones de Adobe"). En adelante, nos referiremos a usted, la entidad receptora del Software de Adobe, como "Sublicenciatario".</p>
+<p>1. Restricciones de la licencia</p>
+<p>(a) Flash Player 10.x se ha diseñado únicamente como un complemento del navegador. El Sublicenciatario no podrá modificar ni distribuir este Software de Adobe para un uso distinto al de complemento del navegador para reproducir contenido en páginas web. Por ejemplo, el Sublicenciatario no podrá modificar este Software de Adobe para permitir la interacción con aplicaciones que se ejecuten fuera del navegador (aplicaciones independientes, widgets, interfaces gráficas de dispositivos, etc.).</p>  
+<p>(b) El Sublicenciatario no podrá exponer las API de Flash Player 10.x a través de una interfaz del complemento del navegador de tal forma que permita que dicha extensión se utilice para reproducir contenido de una página web como una aplicación independiente.</p>
+<p>(c) El software Chrome-Reader no se podrá utilizar para mostrar documentos PDF ni EPUB que utilicen protocolos de administración de derechos digitales u otros sistemas distintos a Adobe DRM.</p>
+<p>(d) Se debe habilitar Adobe DRM en el software Chrome-Reader para todos los documentos PDF y EPUB protegidos con Adobe DRM.</p>
+<p>(e) El software Chrome-Reader no podrá, a excepción de los casos permitidos explícitamente por las especificaciones técnicas, inhabilitar ninguna de las funciones ofrecidas por Adobe en el Software de Adobe como, por ejemplo, la compatibilidad con los formatos PDF y EPUB y con Adobe DRM.</p>
+<p>2. Transmisión electrónica. El Sublicenciatario podrá permitir la descarga del Software de Adobe de un sitio web, de Internet, de una intranet o de una tecnología similar (en adelante, "Transmisiones electrónicas"), siempre que acepte que cualquier distribución del Software de Adobe que realice, incluida la distribución en CD-ROM, en DVD-ROM u en otros medios de almacenamiento o Transmisiones electrónicas, si está per
