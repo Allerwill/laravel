@@ -81,7 +81,7 @@
 </nav>
 <!-- END nav -->
 
-    <?php echo $__env->yieldContent('content'); ?>z
+    <?php echo $__env->yieldContent('content'); ?>
 
 <footer class="ftco-footer ftco-section">
     <div class="container">

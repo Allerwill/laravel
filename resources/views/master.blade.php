@@ -81,7 +81,7 @@
 </nav>
 <!-- END nav -->
 
-    @yield('content')z
+    @yield('content')
 
 <footer class="ftco-footer ftco-section">
     <div class="container">
