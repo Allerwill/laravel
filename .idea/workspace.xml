@@ -109,7 +109,7 @@
   <component name="ProjectId" id="1RSEqUC8lvtUGZErglgklXanYYb" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Original-Shop" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -142,7 +142,8 @@
       <workItem from="1569652288472" duration="8113000" />
       <workItem from="1570119628172" duration="41000" />
       <workItem from="1570256349105" duration="3054000" />
-      <workItem from="1570862017514" duration="589000" />
+      <workItem from="1570862017514" duration="803000" />
+      <workItem from="1570863485535" duration="1150000" />
     </task>
     <servers />
   </component>
@@ -154,7 +155,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
