@@ -109,7 +109,7 @@
   <component name="ProjectId" id="1RSEqUC8lvtUGZErglgklXanYYb" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Original-Shop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -144,7 +144,10 @@
       <workItem from="1570256349105" duration="3054000" />
       <workItem from="1570862017514" duration="803000" />
       <workItem from="1570863485535" duration="5815000" />
-      <workItem from="1570879571449" duration="384000" />
+      <workItem from="1570879571449" duration="543000" />
+      <workItem from="1571019742946" duration="57000" />
+      <workItem from="1571019946789" duration="672000" />
+      <workItem from="1571397457564" duration="582000" />
     </task>
     <servers />
   </component>
