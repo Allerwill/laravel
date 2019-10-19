@@ -8,6 +8,7 @@ class WelcomeController extends Controller
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function index($ID = 'index'){
         //$product = Product::all();
         //return view('welcome', ['product' => $product]);
@@ -17,6 +18,9 @@ class WelcomeController extends Controller
 //        $products = Product::all();
 //        return view('welcome', ['Product' => $products]);
 >>>>>>> 0bf2aca0f4381e6d507cd3a35d14c39e115ba7ec
+=======
+    public function index($ID = 'index'){
+>>>>>>> parent of 0bf2aca... Created Model: Product, Manufacture
 =======
     public function index($ID = 'index'){
 >>>>>>> parent of 0bf2aca... Created Model: Product, Manufacture
