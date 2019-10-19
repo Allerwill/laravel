@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use app\Protype;
+use app\Product;
 
 class WelcomeController extends Controller
 {
