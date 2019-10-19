@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Oct 19, 2019 at 06:51 AM
--- Server version: 5.7.26
--- PHP Version: 7.3.5
+-- Máy chủ: 127.0.0.1:3306
+-- Thời gian đã tạo: Th10 19, 2019 lúc 07:58 AM
+-- Phiên bản máy phục vụ: 5.7.21
+-- Phiên bản PHP: 7.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `laravel`
+-- Cơ sở dữ liệu: `laravel`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `products`
+-- Cấu trúc bảng cho bảng `products`
 --
 
 DROP TABLE IF EXISTS `products`;
@@ -38,53 +38,39 @@ CREATE TABLE IF NOT EXISTS `products` (
   `manu_ID` int(11) NOT NULL,
   `type_ID` int(11) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `products`
+-- Đang đổ dữ liệu cho bảng `products`
 --
 
 INSERT INTO `products` (`ID`, `name`, `price`, `image`, `description`, `manu_ID`, `type_ID`) VALUES
-(1, 'Điện thoại iPhone X 256GB Gray', 1500000, 'iphone-x-256gb-h2-400x460-400x460.png', 'Thông số kỹ thuật\r\nMàn hình:	OLED, 5.8\", Super Retina\r\nHệ điều hành:	iOS 11\r\nCamera sau:	2 camera 12 MP\r\nCamera trước:	7 MP\r\nCPU:	Apple A11 Bionic 6 nhân\r\nRAM:	3 GB\r\nBộ nhớ trong:	256 GB\r\nThẻ SIM:	1 Nano SIM, Hỗ trợ 4G\r\nDung lượng pin:	2716 mAh, có sạc nhanh', 1, 1),
-(6, 'Điện thoại Samsung Galaxy Note 9 512GB', 200000, 'samsung-galaxy-note-9-512gb-blue-400x460.png', 'sadfsfs smart sdjflsjdfs', 2, 1),
-(2, 'Điện thoại iPhone 8 Plus 64GB', 34641530, 'iphone-8-plus-64gb-h1-400x460.png', 'Thông số kỹ thuật\r\nMàn hình:	LED-backlit IPS LCD, 5.5\", Retina HD\r\nHệ điều hành:	iOS 11\r\nCamera sau:	2 camera 12 MP\r\nCamera trước:	7 MP\r\nCPU:	Apple A11 Bionic 6 nhân\r\nRAM:	3 GB\r\nBộ nhớ trong:	64 GB\r\nThẻ SIM:	1 Nano SIM, Hỗ trợ 4G\r\nDung lượng pin:	2691 mAh, có sạc nhanh\r\n', 1, 1),
-(3, 'Điện thoại iPhone 6s 32GB', 45244545, 'iphone-6s-32gb-vang-dong-2-400x460.png', 'Thông số kỹ thuật\r\nMàn hình:	LED-backlit IPS LCD, 4.7\", Retina HD\r\nHệ điều hành:	iOS 11\r\nCamera sau:	12 MP\r\nCamera trước:	5 MP\r\nCPU:	Apple A9 2 nhân 64-bit\r\nRAM:	2 GB\r\nBộ nhớ trong:	32 GB\r\nThẻ SIM:\r\n1 Nano SIM, Hỗ trợ 4G\r\nHOTMua sim Mobi Big 60 (3GB data/ tháng). Giá từ 80.000đ\r\nDung lượng pin:	1715 mAh', 1, 1),
-(4, 'Điện thoại iPhone 7 Plus 128GB', 1200000, 'iphone-7-plus-128gb-de-400x460.png', 'Thông số kỹ thuật\r\nMàn hình:	LED-backlit IPS LCD, 5.5\", Retina HD\r\nHệ điều hành:	iOS 11\r\nCamera sau:	2 camera 12 MP\r\nCamera trước:	7 MP\r\nCPU:	Apple A10 Fusion 4 nhân 64-bit\r\nRAM:	3 GB\r\nBộ nhớ trong:	128 GB\r\nThẻ SIM:\r\n1 Nano SIM, Hỗ trợ 4G\r\nHOTMua sim Mobi Big 60 (3GB data/ tháng). Giá từ 80.000đ\r\nDung lượng pin:	2900 mAh', 1, 1),
-(5, 'Điện thoại iPhone 8 Plus Red 256GB (Đỏ)', 456456, 'iphone-8-plus-do-256gb-400x460.png', 'Thông số kỹ thuật\r\nMàn hình:	LED-backlit IPS LCD, 5.5\", Retina HD\r\nHệ điều hành:	iOS 11\r\nCamera sau:	2 camera 12 MP\r\nCamera trước:	7 MP\r\nCPU:	Apple A11 Bionic 6 nhân\r\nRAM:	3 GB\r\nBộ nhớ trong:	256 GB\r\nThẻ SIM:	1 Nano SIM, Hỗ trợ 4G\r\nDung lượng pin:	2691 mAh, có sạc nhanh', 1, 1),
-(7, 'Điện thoại Samsung Galaxy J8', 7896787, 'samsung-galaxy-j8-400x460.png', 'Thông số kỹ thuật\r\nMàn hình:	Super AMOLED, 6.0\", HD+\r\nHệ điều hành:	Android 8.0 (Oreo)\r\nCamera sau:	16 MP và 5 MP (2 camera)\r\nCamera trước:	16 MP\r\nCPU:	Qualcomm Snapdragon 450 8 nhân 64-bit\r\nRAM:	3 GB\r\nBộ nhớ trong:	32 GB\r\nThẻ nhớ:	MicroSD, hỗ trợ tối đa 256 GB\r\nThẻ SIM:\r\n2 Nano SIM, Hỗ trợ 4G\r\nHOTMua sim Mobi Big 60 (3GB data/ tháng). Giá từ 80.000đ\r\nDung lượng pin:	3500 mAh', 2, 1),
-(8, 'Điện thoại Samsung Galaxy A6 (2018)', 76745, 'samsung-galaxy-a6-2018-1-400x460.png', 'Thông số kỹ thuật\r\nMàn hình:	Super AMOLED, 5.6\", HD+\r\nHệ điều hành:	Android 8.0 (Oreo)\r\nCamera sau:	16 MP\r\nCamera trước:	16 MP\r\nCPU:	Exynos 7870 8 nhân 64-bit\r\nRAM:	3 GB\r\nBộ nhớ trong:	32 GB\r\nThẻ nhớ:	MicroSD, hỗ trợ tối đa 256 GB\r\nThẻ SIM:\r\n2 Nano SIM, Hỗ trợ 4G\r\nHOTMua sim Mobi Big 60 (3GB data/ tháng). Giá từ 80.000đ\r\nDung lượng pin:	3000 mAh', 2, 1),
-(9, 'Điện thoại Samsung Galaxy J7 Pro', 45354345, 'samsung-galaxy-j7-pro-6-400x460.png', 'Thông số kỹ thuật\r\nMàn hình:	Super AMOLED, 5.5\", Full HD\r\nHệ điều hành:	Android 7.0 (Nougat)\r\nCamera sau:	13 MP\r\nCamera trước:	13 MP\r\nCPU:	Exynos 7870 8 nhân 64-bit\r\nRAM:	3 GB\r\nBộ nhớ trong:	32 GB\r\nThẻ nhớ:	MicroSD, hỗ trợ tối đa 256 GB\r\nThẻ SIM:\r\n2 Nano SIM, Hỗ trợ 4G\r\nHOTMua sim Mobi Big 60 (3GB data/ tháng). Giá từ 80.000đ\r\nDung lượng pin:	3600 mAh', 2, 1),
-(10, 'Điện thoại Samsung Galaxy S9+ 128GB Hoàng Kim', 4564534, 'samsung-galaxy-s9-plus-128gb-vang-dong-2-400x460.png', 'Thông số kỹ thuật\r\nMàn hình:	Super AMOLED, 6.2\", Quad HD+ (2K+)\r\nHệ điều hành:	Android 8.0 (Oreo)\r\nCamera sau:	2 camera 12 MP\r\nCamera trước:	8 MP\r\nCPU:	Exynos 9810 8 nhân 64 bit\r\nRAM:	6 GB\r\nBộ nhớ trong:	128 GB\r\nThẻ nhớ:	MicroSD, hỗ trợ tối đa 400 GB\r\nThẻ SIM:	2 SIM Nano (SIM 2 chung khe thẻ nhớ), Hỗ trợ 4G\r\nDung lượng pin:	3500 mAh, có sạc nhanh', 2, 1),
-(11, 'Điện thoại Sony Xperia XA1 Plus', 98798789, 'sony-xepria-xa1-plus-1-400x460.png', 'Thông số kỹ thuật\r\nMàn hình:	IPS LCD, 5.5\", Full HD\r\nHệ điều hành:	Android 7.0 (Nougat)\r\nCamera sau:	23 MP\r\nCamera trước:	8 MP\r\nCPU:	Mediatek Helio P20\r\nRAM:	4 GB\r\nBộ nhớ trong:	32 GB\r\nThẻ nhớ:	MicroSD, hỗ trợ tối đa 256 GB\r\nThẻ SIM:\r\n2 Nano SIM, Hỗ trợ 4G\r\nHOTMua sim Mobi Big 60 (3GB data/ tháng). Giá từ 80.000đ\r\nDung lượng pin:	3430 mAh, có sạc nhanh', 3, 1),
-(12, 'Điện thoại Sony Xperia L1', 19216811, 'sony-xperia-l1-den-3-400x460.png', 'Thông số kỹ thuật\r\nMàn hình:	IPS LCD, 5.5\", HD\r\nHệ điều hành:	Android 7.0 (Nougat)\r\nCamera sau:	13 MP\r\nCamera trước:	5 MP\r\nCPU:	MT6737T, 4 nhân\r\nRAM:	2 GB\r\nBộ nhớ trong:	16 GB\r\nThẻ nhớ:	MicroSD, hỗ trợ tối đa 256 GB\r\nThẻ SIM:\r\n2 Nano SIM, Hỗ trợ 4G\r\nHOTMua sim Mobi Big 60 (3GB data/ tháng). Giá từ 80.000đ\r\nDung lượng pin:	2620 mAh\r\n', 3, 1),
-(13, 'Điện thoại Sony Xperia XA1 Ultra', 1000000, 'sony-xa1-ultra-trang-1-400x460.png', 'Thông số kỹ thuật\r\nMàn hình:	IPS LCD, 6.0\", Full HD\r\nHệ điều hành:	Android 7.0 (Nougat)\r\nCamera sau:	23 MP\r\nCamera trước:	16 MP\r\nCPU:	Mediatek Helio P20\r\nRAM:	4 GB\r\nBộ nhớ trong:	64 GB\r\nThẻ nhớ:	MicroSD, hỗ trợ tối đa 256 GB\r\nThẻ SIM:\r\n2 Nano SIM, Hỗ trợ 4G\r\nHOTMua sim Mobi Big 60 (3GB data/ tháng). Giá từ 80.000đ\r\nDung lượng pin:	2700 mAh, có sạc nhanh', 3, 1),
-(14, 'Điện thoại Sony Xperia XZ1', 2300000, 'sony-xperia-xz1-xanh-2-400x460 (1).png', 'Thông số kỹ thuật\r\nMàn hình:	IPS HDR LCD, 5.2\", Full HD\r\nHệ điều hành:	Android 8.0 (Oreo)\r\nCamera sau:	19 MP\r\nCamera trước:	13 MP\r\nCPU:	Qualcomm Snapdragon 835 8 nhân 64-bit\r\nRAM:	4 GB\r\nBộ nhớ trong:	64 GB\r\nThẻ nhớ:	MicroSD, hỗ trợ tối đa 256 GB\r\nThẻ SIM:	2 Nano SIM, Hỗ trợ 4G\r\nDung lượng pin:	2700 mAh, có sạc nhanh', 3, 1),
-(15, 'Điện thoại Sony Xperia XA1', 499999, 'sony-xperia-xa1-400x4601-400x460.png', 'Thông số kỹ thuật\r\nMàn hình:	IPS LCD, 5\", HD\r\nHệ điều hành:	Android 7.0 (Nougat)\r\nCamera sau:	23 MP\r\nCamera trước:	8 MP\r\nCPU:	Mediatek Helio P20\r\nRAM:	3 GB\r\nBộ nhớ trong:	32 GB\r\nThẻ SIM:	2 Nano SIM\r\nDung lượng pin:	2300 mAh', 3, 1),
-(16, 'Điện thoại Xiaomi Mi A2', 17221130, 'xiaomi-mi-a2-2-400x460.png', 'Thông số kỹ thuật\r\nMàn hình:	IPS LCD, 5.99\", Full HD+\r\nHệ điều hành:	Android One\r\nCamera sau:	20 MP và 12 MP (2 camera)\r\nCamera trước:	20 MP\r\nCPU:	Qualcomm Snapdragon 660 8 nhân\r\nRAM:	4 GB\r\nBộ nhớ trong:	64 GB\r\nThẻ SIM:\r\n2 Nano SIM, Hỗ trợ 4G\r\nHOTMua sim Mobi Big 60 (3GB data/ tháng). Giá từ 80.000đ\r\nDung lượng pin:	3010 mAh, có sạc nhanh', 4, 1),
-(17, 'Điện thoại Xiaomi Redmi Note 5', 321565, 'xiaomi-redmi-note-5-pro-400x460.png', 'Thông số kỹ thuật\r\nMàn hình:	IPS LCD, 5.99\", Full HD+\r\nHệ điều hành:	Android 8.1 (Oreo)\r\nCamera sau:	12 MP và 5 MP (2 camera)\r\nCamera trước:	13 MP\r\nCPU:	Qualcomm Snapdragon 636 8 nhân\r\nRAM:	4 GB\r\nBộ nhớ trong:	64 GB\r\nThẻ nhớ:	MicroSD, hỗ trợ tối đa 128 GB\r\nThẻ SIM:\r\n2 SIM Nano (SIM 2 chung khe thẻ nhớ), Hỗ trợ 4G\r\nHOTMua sim Mobi Big 60 (3GB data/ tháng). Giá từ 80.000đ\r\nDung lượng pin:	4000 mAh, có sạc nhanh', 4, 1),
-(18, 'Điện thoại Xiaomi Mi A1 64GB', 789854, 'xiaomi-mi-a1-mau-vang-hong-400x460.png', 'Thông số kỹ thuật\r\nMàn hình:	LTPS LCD, 5.5\", Full HD\r\nHệ điều hành:	Android 7.1 (Nougat)\r\nCamera sau:	2 camera 12 MP\r\nCamera trước:	5 MP\r\nCPU:	Snapdragon 625 8 nhân 64-bit\r\nRAM:	4 GB\r\nBộ nhớ trong:	64 GB\r\nThẻ nhớ:	MicroSD, hỗ trợ tối đa 128 GB\r\nThẻ SIM:\r\n2 SIM Nano (SIM 2 chung khe thẻ nhớ), Hỗ trợ 4G\r\nHOTMua sim Mobi Big 60 (3GB data/ tháng). Giá từ 80.000đ\r\nDung lượng pin:	3080 mAh', 4, 1),
-(19, 'Điện thoại Xiaomi Redmi Note 6 Pro 32GB\r\n', 2315447, 'xiaomi-redmi-note-6-pro-32gb-blue-400x460.png', 'Thông số kỹ thuật\r\nMàn hình:	IPS LCD, 6.26\", Full HD+\r\nHệ điều hành:	Android 8.1 (Oreo)\r\nCamera sau:	12 MP và 5 MP (2 camera)\r\nCamera trước:	8 MP và 2 MP\r\nCPU:	Qualcomm Snapdragon 636 8 nhân\r\nRAM:	3 GB\r\nBộ nhớ trong:	32 GB\r\nThẻ nhớ:	MicroSD, hỗ trợ tối đa 256 GB\r\nThẻ SIM:\r\n2 SIM Nano (SIM 2 chung khe thẻ nhớ), Hỗ trợ 4G\r\nHOTMua sim Mobi Big 60 (3GB data/ tháng). Giá từ 80.000đ\r\nDung lượng pin:	4000 mAh', 4, 1),
-(20, 'Điện thoại Xiaomi Redmi 5 Plus 4GB', 1478765, 'xiaomi-redmi-5-plus-2-1-400x460.png', 'Thông số kỹ thuật\r\nMàn hình:	IPS LCD, 5.99\", Full HD+\r\nHệ điều hành:	Android 7.1 (Nougat)\r\nCamera sau:	12 MP\r\nCamera trước:	5 MP\r\nCPU:	Snapdragon 625 8 nhân 64-bit\r\nRAM:	4 GB\r\nBộ nhớ trong:	64 GB\r\nThẻ nhớ:	MicroSD, hỗ trợ tối đa 256 GB\r\nThẻ SIM:\r\n2 SIM Nano (SIM 2 chung khe thẻ nhớ), Hỗ trợ 4G\r\nHOTMua sim Mobi Big 60 (3GB data/ tháng). Giá từ 80.000đ\r\nDung lượng pin:	4000 mAh', 4, 1),
-(21, 'Điện thoại Huawei Nova 3i', 7800000, 'huawei-nova-3i-den-chipu-1-400x460.png', 'Thông số kỹ thuật\r\nMàn hình:	LTPS LCD, 6.3\", Full HD+\r\nHệ điều hành:	Android 8.1 (Oreo)\r\nCamera sau:	16 MP và 2 MP (2 camera)\r\nCamera trước:	24 MP và 2 MP (2 camera)\r\nCPU:	HiSilicon Kirin 710\r\nRAM:	4 GB\r\nBộ nhớ trong:	128 GB\r\nThẻ nhớ:	MicroSD, hỗ trợ tối đa 256 GB\r\nThẻ SIM:\r\n2 Nano SIM, Hỗ trợ 4G\r\nHOTMua sim Mobi Big 60 (3GB data/ tháng). Giá từ 80.000đ', 5, 1),
-(22, 'Điện thoại Huawei Nova 2i', 6933333, 'huawei-nova-2i-2-400x460.png', 'Thông số kỹ thuật\r\nMàn hình:	IPS LCD, 5.9\", Full HD+\r\nHệ điều hành:	Android 7.0 (Nougat)\r\nCamera sau:	16 MP và 2 MP (2 camera)\r\nCamera trước:	13 MP và 2 MP\r\nCPU:	HiSilicon Kirin 659 8 nhân\r\nRAM:	4 GB\r\nBộ nhớ trong:	64 GB\r\nThẻ nhớ:	MicroSD, hỗ trợ tối đa 128 GB\r\nThẻ SIM:\r\n2 Nano SIM, Hỗ trợ 4G\r\nHOTMua sim Mobi Big 60 (3GB data/ tháng). Giá từ 80.000đ\r\nDung lượng pin:	3340 mAh', 4, 1),
-(23, 'Điện thoại Huawei Nova 3', 1222222, 'huawei-nova-3-purple-400x460.png', 'Thông số kỹ thuật\r\nMàn hình:	LTPS LCD, 6.3\", Full HD+\r\nHệ điều hành:	Android 8.1 (Oreo)\r\nCamera sau:	24 MP và 16 MP (2 camera)\r\nCamera trước:	24 MP và 2 MP (2 camera)\r\nCPU:	Hisilicon Kirin 970 8 nhân\r\nRAM:	6 GB\r\nBộ nhớ trong:	128 GB\r\nThẻ nhớ:	MicroSD, hỗ trợ tối đa 256 GB\r\nThẻ SIM:\r\n2 SIM Nano (SIM 2 chung khe thẻ nhớ), Hỗ trợ 4G\r\nHOTMua sim Mobi Big 60 (3GB data/ tháng). Giá từ 80.000đ\r\nDung lượng pin:	3750 mAh, có sạc nhanh', 5, 1),
-(24, 'Điện thoại Huawei P20 Pro', 2500000, 'huawei-p20-pro-h1-400x460.png', 'Thông số kỹ thuật\r\nMàn hình:	OLED, 6.1\", Full HD+\r\nHệ điều hành:	Android 8.1 (Oreo)\r\nCamera sau:	40 MP, 20 MP và 8 MP (3 camera)\r\nCamera trước:	24 MP\r\nCPU:	Hisilicon Kirin 970 8 nhân\r\nRAM:	6 GB\r\nBộ nhớ trong:	128 GB\r\nThẻ SIM:\r\n2 Nano SIM, Hỗ trợ 4G\r\nHOTMua sim Mobi Big 60 (3GB data/ tháng). Giá từ 80.000đ\r\nDung lượng pin:	4000 mAh, có sạc nhanh', 5, 1),
-(25, 'Điện thoại Huawei Y7 Pro (2018)', 1223232, 'huawei-y7-pro-2018-400x460.png', 'Thông số kỹ thuật\r\nMàn hình:	IPS LCD, 5.99\", HD+\r\nHệ điều hành:	Android 8.0 (Oreo)\r\nCamera sau:	13 MP và 2 MP (2 camera)\r\nCamera trước:	8 MP\r\nCPU:	Qualcomm Snapdragon 430 8 nhân 64 bit\r\nRAM:	3 GB\r\nBộ nhớ trong:	32 GB\r\nThẻ nhớ:	MicroSD, hỗ trợ tối đa 256 GB\r\nThẻ SIM:\r\n2 Nano SIM, Hỗ trợ 4G\r\nHOTMua sim Mobi Big 60 (3GB data/ tháng). Giá từ 80.000đ\r\nDung lượng pin:	3000 mAh', 5, 1),
-(26, 'Ốp lưng iPhone X Silicone Apple MQT22 Trắng\r\n', 0, 'op-lung-iphone-x-silicone-apple-mqt22-trang-avatar-1-600x600.jpg', 'Ốp lưng chính hãng Apple, nguyên seal 100%\r\nChất liệu nhựa, kiểu dáng thời trang và đẹp mắt.\r\nThiết kế vừa vặn và ôm sát thân máy.\r\n Dễ dàng tháo/lắp ốp vào máy.', 1, 2),
-(27, 'Ốp lưng Galaxy S9 Plus Nắp gập Clear View Samsung\r\n', 647891, 'op-lung-galaxy-s9-plus-nap-gap-clear-view-samsung-avatar-600x600.jpg', 'Bảo vệ toàn diện màn hình và các góc cạnh.\r\nNghe nhận cuộc gọi, kiểm tra tin nhắn, quản lý cuộc gọi nhỡ, điều khiển nhạc, theo dõi pin mà không cần mở nắp bảo vệ.\r\nChân đế trình chiếu linh hoạt.\r\nỐp lưng chính hãng Samsung.', 2, 2),
-(28, 'Ốp lưng Sony XZ2 nhựa dẻo TPU Case Litchi Grain OSMIA Đen\r\n', 45645645, 'op-lung-sony-xz2-deo-case-litchi-grain-osmia-den-avatar-1-600x600.jpg', 'Chất liệu nhựa, kiểu dáng thời trang và đẹp mắt\r\nThiết kế vừa vặn và ôm sát thân máy\r\n Dễ dàng tháo/lắp ốp vào máy', 3, 2),
-(29, 'Ốp lưng Redmi 4A Nhựa dẻo Xmobile Nude\r\n', 1747896, 'op-lung-redmi-4a-nhua-deo-xmobile-nude-avatar-1-600x600.jpg', 'Chất liệu nhựa dẻo, kiểu dáng thời trang và đẹp mắt.\r\nThiết kế vừa vặn và ôm sát thân máy.\r\n Dễ dàng tháo/lắp ốp vào máy', 4, 2),
-(30, 'Ốp lưng Huawei P20 Pro Nhựa dẻo Noisele JM Gold\r\n', 116666, 'op-lung-huawei-p20-pro-nhua-deo-noisele-jm-gold-add-600x600.jpg', 'Chất liệu nhựa, kiểu dáng thời trang và đẹp mắt.\r\nThiết kế vừa vặn và ôm sát thân máy.\r\n Dễ dàng tháo/lắp ốp vào máy', 5, 2),
-(31, 'Laptop Apple Macbook Pro Touch MR9Q2SA/A i5 2.3GHz/8GB/256GB (2018)\r\n', 455556, 'apple-macbook-pro-touch-mr9q2sa-a-2018-thumb-1-600x600.jpg', 'Thông số kỹ thuật\r\nCPU:	Intel Core i5 Kabylake Refresh, 2.30 GHz\r\nRAM:	8 GB, DDR3L(On board), 2133 MHz\r\nỔ cứng:	SSD: 256 GB\r\nMàn hình:	13.3 inch, Retina (2560 x 1600)\r\nCard màn hình:	Card đồ họa tích hợp, Intel Iris Plus Graphics 655\r\nCổng kết nối:	4 x Thunderbolt 3 (USB-C)\r\nĐặc biệt:	Có đèn bàn phím\r\nHệ điều hành:	Mac OS\r\nThiết kế:	Vỏ kim loại nguyên khối, PIN liền\r\nKích thước:	Dày 14.9 mm, 1.37 kg', 1, 3),
-(32, 'Laptop Samsung N510\r\n', 157980, 'Samsung-N510L.jpg', 'Thông số kỹ thuật\r\nCPU:	N280, 1.66 GHz\r\nRAM:	1 GB, DDR2, 667 MHz\r\nMàn hình:	11.6 inch, HD (1366 x 768)\r\nCard màn hình:	Card đồ họa tích hợp, NVIDIA GeForce 9400M GeForceBoost\r\nCổng kết nối:	-\r\nKích thước:	199, 1.39\r\n', 2, 3),
-(33, 'Laptop Sony Vaio CR309E R Red\r\n', 135400, 'cr307red.jpg', 'Thông số kỹ thuật\r\nCPU:	T2330, 1.60 GHz\r\nRAM:	2 GB, DDR2, 667 MHz\r\nMàn hình:	14.1 inch, WXGA (1280 x 800)\r\nCard màn hình:	Card đồ họa tích hợp, Intel Graphics Media Accelerator (GMA) X3100\r\nCổng kết nối:	IEEE 1394 (Firewire), S-Video, VGA (D-Sub)\r\nKích thước:	335, 2.40', 4, 3),
-(34, 'Mi Notebook Pro', 354000, 'minotebookpro_800x450.jpg', 'Core i7, RAM 16GB, bảo mật vân tay', 4, 3),
-(35, 'Honor Magicbook', 1500000, 'huawei-matebook-x-4707-008_800x450.jpg', 'gnfjfj', 5, 3);
+(1, 'BELL PEPPER', 80, 'product-1.jpg', 'Description OK', 1, 2),
+(2, 'STRAWBERRY', 120, 'product-2.jpg', 'Description OK', 2, 2),
+(3, 'GREEN BEANS', 120, 'product-3.jpg', 'Description OK', 1, 1),
+(4, 'PURPLE CABBAGE', 120, 'product-4.jpg', 'Description OK', 1, 1),
+(5, 'TOMATOE', 80, 'product-5.jpg', 'Description OK', 1, 2),
+(7, 'BROCOLLI', 120, 'product-6.jpg', 'Description OK', 1, 1),
+(8, 'CARROTS', 120, 'product-7.jpg', 'Description OK', 2, 2),
+(9, 'FRUIT JUICE', 120, 'product-8.jpg', 'Description OK', 2, 3),
+(10, 'ONION', 80, 'product-9.jpg', 'Description OK', 2, 4),
+(11, 'APPLE', 120, 'product-10.jpg', 'Description OK', 2, 2),
+(12, 'GARLIC', 120, 'product-11.jpg', 'Description OK', 3, 4),
+(13, 'CHILLI', 120, 'product-12.jpg', 'Description OK', 3, 1),
+(14, 'BELL PEPPER', 80, 'product-1.jpg', 'Description OK', 1, 2),
+(15, 'STRAWBERRY', 120, 'product-2.jpg', 'Description OK', 2, 2),
+(19, 'STRAWBERRY', 120, 'product-2.jpg', 'Description OK', 2, 2),
+(20, 'CARROTS', 120, 'product-7.jpg', 'Description OK', 2, 2),
+(21, 'FRUIT JUICE', 120, 'product-8.jpg', 'Description OK', 2, 3),
+(6, 'ORANGE JUICE', 120, 'product-8.jpg', 'Description OK', 2, 3),
+(17, 'TOMATOE', 80, 'product-5.jpg', 'Description OK', 1, 2),
+(18, 'BROCOLLI', 120, 'product-6.jpg', 'Description OK', 1, 1),
+(16, 'PURPLE CABBAGE', 120, 'product-4.jpg', 'Description OK', 1, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `protypes`
+-- Cấu trúc bảng cho bảng `protypes`
 --
 
 DROP TABLE IF EXISTS `protypes`;
@@ -96,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `protypes` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `protypes`
+-- Đang đổ dữ liệu cho bảng `protypes`
 --
 
 INSERT INTO `protypes` (`type_ID`, `type_name`, `type_img`) VALUES
@@ -108,7 +94,7 @@ INSERT INTO `protypes` (`type_ID`, `type_name`, `type_img`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Cấu trúc bảng cho bảng `user`
 --
 
 DROP TABLE IF EXISTS `user`;
@@ -121,7 +107,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `user`
+-- Đang đổ dữ liệu cho bảng `user`
 --
 
 INSERT INTO `user` (`user_ID`, `username`, `password`) VALUES
