@@ -3,11 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\Product;
-use app\Manufacture;
 
 class WelcomeController extends Controller
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function index($ID = 'index'){
         //$product = Product::all();
@@ -18,8 +17,10 @@ class WelcomeController extends Controller
 //        $products = Product::all();
 //        return view('welcome', ['Product' => $products]);
 >>>>>>> 0bf2aca0f4381e6d507cd3a35d14c39e115ba7ec
+=======
+    public function index($ID = 'index'){
+>>>>>>> parent of 0bf2aca... Created Model: Product, Manufacture
         return view($ID);
     }
-
 
 }
