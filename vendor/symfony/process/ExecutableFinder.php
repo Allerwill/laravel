@@ -1,1 +1,88 @@
-ض سِجلّ الأنشطةصفحة الخلفيةقد تكون هذه الإضافة تالفة.جمع الأخطاءليس هناك شيء تراه هنا، انتقل إلى مكان آخر.إسقاط للتثبيتظهرت تحذيرات عن محاولة تثبيت هذه الإضافة:تحذيرتم التحميل من:الإصلاح(iframe)(غير نشطة)(التصفح المتخفي)وضع مطوّر البرامجتعتبر هذه الإضافة قديمة وغير مفعّلة بواسطة سياسة المؤسسة. وقد تصبح مفعّلة تلقائيًا عندما يتوفر إصدار أحدث.أخطاءوظيفة مجهولةالسياقغير معروفمحو الأنشطةمحو الإدخالتتبع التكديس{LINE_COUNT,plural, =1{<لم يتم عرض سطر واحد>}zero{<لم يتم عرض $1 سطر>}two{<لم يتم عرض سطرين ($1)>}few{<لم يتم عرض $1) سطور>}many{<لم يتم عرض $1 سطرًا>}other{<لم يتم عرض $1 سطر>}}يمكن لهذه الإضافة قراءة بياناتك وتغييرها على المواقع. يمكنك التحكُّم في المواقع التي يمكن لهذه الإضافة الوصول إليها.السماح لهذه الإضافة بقراءة جميع بياناتك وتغييرها على المواقع الإلكترونية التي تزورها:عند النقرعلى مواقع إلكترونية محددةعلى جميع المواقعالمواقع الإلكترونية المسموح بهاخطأ في السطر رقم $1خطأ من السطر رقم $1 إلى $2$1 - سجلّ الأنشطة‏البحث حسب طلب بيانات من واجهة برمجة التطبيقات/عنوان URLاسم النشاطالعددالوقتالوقت الفعليبدء التسجيلإيقاف التسجيلجارٍ الاستماع إلى أنشطة الإضافات…يُرجى الضغط على "البدء" للاستماع إلى أنشطة الإضافاتوسيطات وظيفة واجهة برمجة التطبيقاتمعلومات طلب الويبتوسيع الكلتصغير الكلتصدير الأنشطة‏<span>رقم التعريف: </span>$1فحص القراءات$1 أخرى…ليس هناك أي عروض نشطةالسماح بالتشغيل في وضع التصفح المتخفيتعتمد الإضافات التالية على هذه الإضافة:$1 (رقم التعريف: $2)الوصفذات صلة بـ $1رمز التطبيقرمز الإضافةرقم التعريفتم تفعيل الإضافةتم تفعيل التطب�
+<?php
+
+/*
+ * This file is part of the Symfony package.
+ *
+ * (c) Fabien Potencier <fabien@symfony.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace Symfony\Component\Process;
+
+/**
+ * Generic executable finder.
+ *
+ * @author Fabien Potencier <fabien@symfony.com>
+ * @author Johannes M. Schmitt <schmittjoh@gmail.com>
+ */
+class ExecutableFinder
+{
+    private $suffixes = ['.exe', '.bat', '.cmd', '.com'];
+
+    /**
+     * Replaces default suffixes of executable.
+     */
+    public function setSuffixes(array $suffixes)
+    {
+        $this->suffixes = $suffixes;
+    }
+
+    /**
+     * Adds new possible suffix to check for executable.
+     *
+     * @param string $suffix
+     */
+    public function addSuffix($suffix)
+    {
+        $this->suffixes[] = $suffix;
+    }
+
+    /**
+     * Finds an executable by name.
+     *
+     * @param string      $name      The executable name (without the extension)
+     * @param string|null $default   The default to return if no executable is found
+     * @param array       $extraDirs Additional dirs to check into
+     *
+     * @return string|null The executable path or default value
+     */
+    public function find($name, $default = null, array $extraDirs = [])
+    {
+        if (ini_get('open_basedir')) {
+            $searchPath = array_merge(explode(PATH_SEPARATOR, ini_get('open_basedir')), $extraDirs);
+            $dirs = [];
+            foreach ($searchPath as $path) {
+                // Silencing against https://bugs.php.net/69240
+                if (@is_dir($path)) {
+                    $dirs[] = $path;
+                } else {
+                    if (basename($path) == $name && @is_executable($path)) {
+                        return $path;
+                    }
+                }
+            }
+        } else {
+            $dirs = array_merge(
+                explode(PATH_SEPARATOR, getenv('PATH') ?: getenv('Path')),
+                $extraDirs
+            );
+        }
+
+        $suffixes = [''];
+        if ('\\' === \DIRECTORY_SEPARATOR) {
+            $pathExt = getenv('PATHEXT');
+            $suffixes = array_merge($pathExt ? explode(PATH_SEPARATOR, $pathExt) : $this->suffixes, $suffixes);
+        }
+        foreach ($suffixes as $suffix) {
+            foreach ($dirs as $dir) {
+                if (@is_file($file = $dir.\DIRECTORY_SEPARATOR.$name.$suffix) && ('\\' === \DIRECTORY_SEPARATOR || @is_executable($file))) {
+                    return $file;
+                }
+            }
+        }
+
+        return $default;
+    }
+}

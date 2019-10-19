@@ -1,1 +1,47 @@
-n thị trên màn hình khácNgười dùng hiện tạiChromeTùy chỉnh và điều khiển Google ChromeTìm kiếm $1 hoặc nhập một URL - Trang này muốn cài đặt trình xử lý dịch vụ.Xóa văn bản nhập<Nhập cụm từ tìm kiếm>Không tên$1 - Google Chromehttps://chrome.google.com/webstore?hl=viĐã xóa phím tắtKhông hiển thị trên trang nàyHoàn tácKhôi phục tất cảChủ đề được tạo bởiTruy cập nhiều nhấtTìm kiếm trên Google hoặc nhập một URLTùy chỉnh trang nàyNền trong ChromeTải ảnh lênKhôi phục nền mặc địnhChọn một bộ sưu tậpLàm mới hàng ngàyXongHủyLỗi kết nốiLỗi kết nối.Thông tin khácKhông có nền. Hãy thử lại sau.Thêm lối tắtChỉnh sửa phím tắtTênURLXóaNhập một URL hợp lệĐã chỉnh sửa phím tắtĐã thêm phím tắtKhôi phục các phím tắt mặc địnhKhông thể tạo lối tắtKhông thể chỉnh sửa lối tắtKhông thể xóa lối tắtVui lòng kiểm tra micrô của bạn.Chi tiếtHãy nhấp để xem doodle ngày hôm nayTìm kiếm bằng giọng nóiChưa có dịch vụ tìm kiếm bằng giọng nói cho ngôn ngữ của bạn.Đang nghe…Không có kết nối Internet.Không hiểu được.Vui lòng kiểm tra micrô và mức âm thanh của bạn.Tính năng tìm kiếm bằng giọng nói đã bị tắt.Nói ngay bây giờThử lạiĐang chờ…Lỗi chưa biết.Ứng dụngHiển thị ứng dụngMenu chứa các dấu trang bị ẩn75%'Segoe UI', Tahoma, sans-serifĐang xử lý yêu cầu…Chỉnh s
+<?php
+
+/*
+ * This file is part of the Symfony package.
+ *
+ * (c) Fabien Potencier <fabien@symfony.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace Symfony\Component\CssSelector\Tests\Node;
+
+use Symfony\Component\CssSelector\Node\ElementNode;
+use Symfony\Component\CssSelector\Node\FunctionNode;
+use Symfony\Component\CssSelector\Parser\Token;
+
+class FunctionNodeTest extends AbstractNodeTest
+{
+    public function getToStringConversionTestData()
+    {
+        return [
+            [new FunctionNode(new ElementNode(), 'function'), 'Function[Element[*]:function()]'],
+            [new FunctionNode(new ElementNode(), 'function', [
+                new Token(Token::TYPE_IDENTIFIER, 'value', 0),
+            ]), "Function[Element[*]:function(['value'])]"],
+            [new FunctionNode(new ElementNode(), 'function', [
+                new Token(Token::TYPE_STRING, 'value1', 0),
+                new Token(Token::TYPE_NUMBER, 'value2', 0),
+            ]), "Function[Element[*]:function(['value1', 'value2'])]"],
+        ];
+    }
+
+    public function getSpecificityValueTestData()
+    {
+        return [
+            [new FunctionNode(new ElementNode(), 'function'), 10],
+            [new FunctionNode(new ElementNode(), 'function', [
+                new Token(Token::TYPE_IDENTIFIER, 'value', 0),
+            ]), 10],
+            [new FunctionNode(new ElementNode(), 'function', [
+                new Token(Token::TYPE_STRING, 'value1', 0),
+                new Token(Token::TYPE_NUMBER, 'value2', 0),
+            ]), 10],
+        ];
+    }
+}

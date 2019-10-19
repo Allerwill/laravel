@@ -1,4 +1,102 @@
-set_indent xmlwriter_set_indent_string xmlwriter_start_attribute xmlwriter_start_attribute_ns xmlwriter_start_cdata xmlwriter_start_comment xmlwriter_start_document xmlwriter_start_dtd xmlwriter_start_dtd_attlist xmlwriter_start_dtd_element xmlwriter_start_dtd_entity xmlwriter_start_element xmlwriter_start_element_ns xmlwriter_start_pi xmlwriter_text xmlwriter_write_attribute xmlwriter_write_attribute_ns xmlwriter_write_cdata xmlwriter_write_comment xmlwriter_write_dtd xmlwriter_write_dtd_attlist xmlwriter_write_dtd_element xmlwriter_write_dtd_entity xmlwriter_write_element xmlwriter_write_element_ns xmlwriter_write_pi xmlwriter_write_raw xor xsd_1999_namespace xsd_1999_timeinstant xsd_anytype xsd_anyuri xsd_anyxml xsd_base64binary xsd_boolean xsd_byte xsd_date xsd_datetime xsd_decimal xsd_double xsd_duration xsd_entities xsd_entity xsd_float xsd_gday xsd_gmonth xsd_gmonthday xsd_gyear xsd_gyearmonth xsd_hexbinary xsd_id xsd_idref xsd_idrefs xsd_int xsd_integer xsd_language xsd_long xsd_name xsd_namespace xsd_ncname xsd_negativeinteger xsd_nmtoken xsd_nmtokens xsd_nonnegativeinteger xsd_nonpositiveinteger xsd_normalizedstring xsd_notation xsd_positiveinteger xsd_qname xsd_short xsd_string xsd_time xsd_token xsd_unsignedbyte xsd_unsignedint xsd_unsignedlong xsd_unsignedshort xsl_clone_always xsl_clone_auto xsl_clone_never xsl_secpref_create_directory xsl_secpref_default xsl_secpref_none xsl_secpref_read_file xsl_secpref_read_network xsl_secpref_write_file xsl_secpref_write_network yaml_any_break yaml_any_encoding yaml_any_scalar_style yaml_bool_tag yaml_cr_break yaml_crln_break yaml_double_quoted_scalar_style yaml_emit yaml_emit_file yaml_float_tag yaml_folded_scalar_style yaml_int_tag yaml_literal_scalar_style yaml_ln_break yaml_map_tag yaml_null_tag yaml_parse yaml_parse_file yaml_parse_url yaml_php_tag yaml_plain_scalar_style yaml_seq_tag yaml_single_quoted_scalar_style yaml_str_tag yaml_timestamp_tag yaml_utf16be_encoding yaml_utf16le_encoding yaml_utf8_encoding yesexpr yesstr yield zend_debug_build zend_logo_guid zend_multibyte zend_thread_id zend_thread_safe zend_version zip_close zip_entry_close zip_entry_compressedsize zip_entry_compressionmethod zip_entry_filesize zip_entry_name zip_entry_open zip_entry_read zip_open zip_read zlib_decode zlib_encode zlib_encoding_deflate zlib_encoding_gzip zlib_encoding_raw zlib_get_coding_type</Keywords>
-        </Language>
-        <Language name="postscript" ext="ps" commentLine="%">
-            <Keywords name="instre1">$error = == FontDirectory StandardEncoding UserObjects abs add aload anchorsearch and arc arcn arcto array ashow astore atan awidthshow begin bind bitshift bytesavailable cachestatus ceiling charpath clear cleardictstack cleartomark clip clippath closefile closepath concat concatmatrix copy copypage cos count countdictstack countexecstack counttomark currentcmykcolor currentcolorspace currentdash currentdict currentfile currentflat currentfont currentgray currenthsbcolor currentlinecap currentlinejoin currentlinewidth currentmatrix currentmiterlimit currentpagedevice currentpoint currentr
+<?php
+
+/*
+ * This file is part of the Symfony package.
+ *
+ * (c) Fabien Potencier <fabien@symfony.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace Symfony\Component\HttpFoundation;
+
+use Symfony\Component\Routing\RequestContext;
+
+/**
+ * A helper service for manipulating URLs within and outside the request scope.
+ *
+ * @author Valentin Udaltsov <udaltsov.valentin@gmail.com>
+ */
+final class UrlHelper
+{
+    private $requestStack;
+    private $requestContext;
+
+    public function __construct(RequestStack $requestStack, RequestContext $requestContext = null)
+    {
+        $this->requestStack = $requestStack;
+        $this->requestContext = $requestContext;
+    }
+
+    public function getAbsoluteUrl(string $path): string
+    {
+        if (false !== strpos($path, '://') || '//' === substr($path, 0, 2)) {
+            return $path;
+        }
+
+        if (null === $request = $this->requestStack->getMasterRequest()) {
+            return $this->getAbsoluteUrlFromContext($path);
+        }
+
+        if ('#' === $path[0]) {
+            $path = $request->getRequestUri().$path;
+        } elseif ('?' === $path[0]) {
+            $path = $request->getPathInfo().$path;
+        }
+
+        if (!$path || '/' !== $path[0]) {
+            $prefix = $request->getPathInfo();
+            $last = \strlen($prefix) - 1;
+            if ($last !== $pos = strrpos($prefix, '/')) {
+                $prefix = substr($prefix, 0, $pos).'/';
+            }
+
+            return $request->getUriForPath($prefix.$path);
+        }
+
+        return $request->getSchemeAndHttpHost().$path;
+    }
+
+    public function getRelativePath(string $path): string
+    {
+        if (false !== strpos($path, '://') || '//' === substr($path, 0, 2)) {
+            return $path;
+        }
+
+        if (null === $request = $this->requestStack->getMasterRequest()) {
+            return $path;
+        }
+
+        return $request->getRelativeUriForPath($path);
+    }
+
+    private function getAbsoluteUrlFromContext(string $path): string
+    {
+        if (null === $this->requestContext || '' === $host = $this->requestContext->getHost()) {
+            return $path;
+        }
+
+        $scheme = $this->requestContext->getScheme();
+        $port = '';
+
+        if ('http' === $scheme && 80 !== $this->requestContext->getHttpPort()) {
+            $port = ':'.$this->requestContext->getHttpPort();
+        } elseif ('https' === $scheme && 443 !== $this->requestContext->getHttpsPort()) {
+            $port = ':'.$this->requestContext->getHttpsPort();
+        }
+
+        if ('#' === $path[0]) {
+            $queryString = $this->requestContext->getQueryString();
+            $path = $this->requestContext->getPathInfo().($queryString ? '?'.$queryString : '').$path;
+        } elseif ('?' === $path[0]) {
+            $path = $this->requestContext->getPathInfo().$path;
+        }
+
+        if ('/' !== $path[0]) {
+            $path = rtrim($this->requestContext->getBaseUrl(), '/').'/'.$path;
+        }
+
+        return $scheme.'://'.$host.$port.$path;
+    }
+}

@@ -3,16 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\Protype;
-use app\Product;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
+use App\Protype;
+use App\Product;
 
 class WelcomeController extends Controller
 {
 
     public function index($ID = 'index'){
-        //$product = Product::all();
-        //return view('welcome', ['product' => $product]);
-        return view($ID);
+        $Product = Product::paginate(4);
+       return view($ID, ['Product' => $Product]);
+  //return view($ID);
+    }
+    public function  details($ID)
+    {
+        $
     }
 
 }
