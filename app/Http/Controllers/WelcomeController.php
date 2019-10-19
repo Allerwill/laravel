@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 class WelcomeController extends Controller
 {
     public function index($ID = 'index'){
+        //$product = Product::all();
+        //return view('welcome', ['product' => $product]);
         return view($ID);
     }
 
