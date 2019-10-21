@@ -16,9 +16,9 @@ class WelcomeController extends Controller
        return view($ID, ['Product' => $Product]);
   //return view($ID);
     }
-    public function  details($ID)
-    {
-        $
-    }
+//    public function  details($ID)
+//    {
+//        $
+//    }
 
 }

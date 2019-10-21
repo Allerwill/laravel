@@ -1,0 +1,2 @@
+Create table Oders : Admin duyet don hang
+Admin xem lich su giao dich

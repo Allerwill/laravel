@@ -144,7 +144,7 @@
         </div>
         <div class="container">
             <div class="row">
-                
+
                 <?php $__currentLoopData = $Product; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <div class="col-md-6 col-lg-3 ftco-animate">
                     <div class="product">
