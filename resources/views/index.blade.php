@@ -105,12 +105,12 @@
                         <div class="col-md-6">
                             <div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(images/category-1.jpg);">
                                 <div class="text px-3 py-1">
-                                    <h2 class="mb-0"><a href="#">Fruits</a></h2>
+                                    <h2 class="mb-0"><a href="shop">Vegetables</a></h2>
                                 </div>
                             </div>
                             <div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(images/category-2.jpg);">
                                 <div class="text px-3 py-1">
-                                    <h2 class="mb-0"><a href="#">Vegetables</a></h2>
+                                    <h2 class="mb-0"><a href="#">Fruits</a></h2>
                                 </div>
                             </div>
                         </div>
