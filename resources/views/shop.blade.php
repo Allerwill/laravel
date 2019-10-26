@@ -29,14 +29,14 @@
 
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
-                        <a href="{{ url('product-single/'.$value['id']) }}" class="img-prod"><img class="img-fluid" src="images/{{$value['image']}}" alt="Colorlib Template">
+                        <a href="{{ url('product-single/'.$value['ID']) }}" class="img-prod"><img class="img-fluid" src="images/{{$value['image']}}" alt="Colorlib Template">
     						<span class="status">30%</span>
     						<div class="overlay"></div>
     					</a>
     					<div class="text py-3 pb-4 px-3 text-center">
 
 {{--    						<h3><a href="product-single/.{{$value['id']}}">{{$value['name']}}</a></h3>--}}
-                            <h3><a href="{{ url('product-single/'.$value['id']) }}">{{$value['name']}}</a></h3>
+                            <h3><a href="{{ url('product-single/'.$value['ID']) }}">{{$value['name']}}</a></h3>
 
                             <div class="d-flex">
     							<div class="pricing">
