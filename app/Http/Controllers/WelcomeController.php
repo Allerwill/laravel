@@ -16,9 +16,10 @@ class WelcomeController extends Controller
        return view($ID, ['Product' => $Product]);
   //return view($ID);
     }
-//    public function  details($ID)
-//    {
-//        $
-//    }
+    public function  details($ID)
+    {
+        $Product = Product::Find($ID);
+        return view('product-single', ['value' => $Product]);
+    }
 
 }

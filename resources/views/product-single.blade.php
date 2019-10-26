@@ -11,13 +11,12 @@
         </div>
       </div>
     </div>
-
     <section class="ftco-section">
     	<div class="container">
     		<div class="row">
-                @foreach($Product as $value)
-    			<div class="col-lg-6 mb-5 ftco-animate">
-    				<a href="images/{{$value['image']}}" class="image-popup"><img src="images/{{$value['image']}}" class="img-fluid" alt="Colorlib Template"></a>
+
+                <div class="col-lg-6 mb-5 ftco-animate">
+    				<a src="images/{{$value['image']}}" class="image-popup"><img src="images/{{$value['image']}}" class="img-fluid" alt="Colorlib Template"></a>
     			</div>
 
     			<div class="col-lg-6 product-details pl-md-5 ftco-animate">
@@ -38,7 +37,7 @@
 								<a href="#" class="mr-2" style="color: #000;">500 <span style="color: #bbb;">Sold</span></a>
 							</p>
 						</div>
-    				<p class="price"><span>$120.00</span></p>
+    				<p class="price"><span>${{$value['price']}}.00</span></p>
     				<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until.
 						</p>
 						<div class="row mt-4">
@@ -74,9 +73,8 @@
 	          		<p style="color: #000;">600 kg available</p>
 	          	</div>
           	</div>
-          	<p><a href="cart.html" class="btn btn-black py-3 px-5">Add to Cart</a></p>
+          	<p><a href="cart" class="btn btn-black py-3 px-5">Add to Cart</a></p>
     			</div>
-                    @endforeach
     		</div>
     	</div>
     </section>

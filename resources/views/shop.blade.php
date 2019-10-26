@@ -26,15 +26,19 @@
     		</div>
     		<div class="row">
                 @foreach($Product as $value)
+
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
-                        <a href="product-single" class="img-prod"><img class="img-fluid" src="images/{{$value['image']}}" alt="Colorlib Template">
+                        <a href="{{ url('product-single/'.$value['id']) }}" class="img-prod"><img class="img-fluid" src="images/{{$value['image']}}" alt="Colorlib Template">
     						<span class="status">30%</span>
     						<div class="overlay"></div>
     					</a>
     					<div class="text py-3 pb-4 px-3 text-center">
-    						<h3><a href="product-single">{{$value['name']}}</a></h3>
-    						<div class="d-flex">
+
+{{--    						<h3><a href="product-single/.{{$value['id']}}">{{$value['name']}}</a></h3>--}}
+                            <h3><a href="{{ url('product-single/'.$value['id']) }}">{{$value['name']}}</a></h3>
+
+                            <div class="d-flex">
     							<div class="pricing">
 		    						<p class="price"><span class="mr-2 price-dc">$120.00</span><span class="price-sale">${{$value['price']}}.00</span></p>
 		    					</div>
@@ -61,6 +65,7 @@
           <div class="col text-center">
             <div class="block-27">
                 {{$Product->links()}}
+
 
             </div>
           </div>

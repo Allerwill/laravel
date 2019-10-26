@@ -15,5 +15,8 @@
     return view('welcome');
 });*/
 
+Route::get('/product-single/{ID?}', 'WelcomeController@details');
+
 Route::get('/{ID?}', 'WelcomeController@index');
+
 

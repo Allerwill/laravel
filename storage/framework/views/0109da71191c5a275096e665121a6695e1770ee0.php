@@ -156,7 +156,7 @@
                             <h3><a href="#"><?php echo e($value['name']); ?></a></h3>
                             <div class="d-flex">
                                 <div class="pricing">
-                                    <p class="price"><span class="mr-2 price-dc">$120.00</span><span class="price-sale">$80.00</span></p>
+                                    <p class="price"><span class="mr-2 price-dc">$<?php echo e($value['price']); ?>.00</span><span class="price-sale">$<?php echo e($value['price']); ?>.00</span></p>
                                 </div>
                             </div>
                             <div class="bottom-area d-flex px-3">
