@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1:3306
--- Thời gian đã tạo: Th10 26, 2019 lúc 04:42 AM
--- Phiên bản máy phục vụ: 5.7.26
--- Phiên bản PHP: 7.2.18
+-- Thời gian đã tạo: Th10 25, 2019 lúc 08:48 PM
+-- Phiên bản máy phục vụ: 5.7.21
+-- Phiên bản PHP: 7.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -65,7 +65,14 @@ INSERT INTO `products` (`ID`, `name`, `price`, `image`, `description`, `manu_ID`
 (6, 'ORANGE JUICE', 120, 'juice-2.jpg', 'Description OK', 2, 3),
 (17, 'BANANA', 80, 'fruits-6.jpg', 'Description OK', 1, 2),
 (18, 'DRIED RASPBERRIES', 120, 'dried-4.jpg', 'Description OK', 1, 4),
-(16, 'SQUASH', 120, 'vegetables-5.jpg', 'Description OK', 1, 1);
+(16, 'SQUASH', 120, 'vegetables-5.jpg', 'Description OK', 1, 1),
+(22, 'PEPPER', 120, 'dried-6.jpg', 'Description OK', 2, 4),
+(23, 'LEMONGRASS', 120, 'dried-7.jpg', 'Description OK', 2, 4),
+(24, 'SCALLION', 120, 'vegetables-6.jpg', 'Description OK', 1, 1),
+(25, 'POTATO', 80, 'fruits-7.jpg', 'Description OK', 1, 2),
+(26, 'CASHEW', 120, 'dried-8.jpg', 'Description OK', 2, 4),
+(27, 'PRESSURE JUICE', 120, 'juice-6.jpg', 'Description OK', 2, 3),
+(28, 'MANGO JUICE', 120, 'juice-7.jpg', 'Description OK', 2, 3);
 
 -- --------------------------------------------------------
 
