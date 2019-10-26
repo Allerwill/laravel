@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1:3306
--- Thời gian đã tạo: Th10 19, 2019 lúc 07:58 AM
--- Phiên bản máy phục vụ: 5.7.21
--- Phiên bản PHP: 7.2.4
+-- Thời gian đã tạo: Th10 26, 2019 lúc 04:42 AM
+-- Phiên bản máy phục vụ: 5.7.26
+-- Phiên bản PHP: 7.2.18
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -45,27 +45,27 @@ CREATE TABLE IF NOT EXISTS `products` (
 --
 
 INSERT INTO `products` (`ID`, `name`, `price`, `image`, `description`, `manu_ID`, `type_ID`) VALUES
-(1, 'BELL PEPPER', 80, 'product-1.jpg', 'Description OK', 1, 2),
-(2, 'STRAWBERRY', 120, 'product-2.jpg', 'Description OK', 2, 2),
-(3, 'GREEN BEANS', 120, 'product-3.jpg', 'Description OK', 1, 1),
-(4, 'PURPLE CABBAGE', 120, 'product-4.jpg', 'Description OK', 1, 1),
-(5, 'TOMATOE', 80, 'product-5.jpg', 'Description OK', 1, 2),
-(7, 'BROCOLLI', 120, 'product-6.jpg', 'Description OK', 1, 1),
-(8, 'CARROTS', 120, 'product-7.jpg', 'Description OK', 2, 2),
-(9, 'FRUIT JUICE', 120, 'product-8.jpg', 'Description OK', 2, 3),
-(10, 'ONION', 80, 'product-9.jpg', 'Description OK', 2, 4),
-(11, 'APPLE', 120, 'product-10.jpg', 'Description OK', 2, 2),
-(12, 'GARLIC', 120, 'product-11.jpg', 'Description OK', 3, 4),
-(13, 'CHILLI', 120, 'product-12.jpg', 'Description OK', 3, 1),
-(14, 'BELL PEPPER', 80, 'product-1.jpg', 'Description OK', 1, 2),
-(15, 'STRAWBERRY', 120, 'product-2.jpg', 'Description OK', 2, 2),
-(19, 'STRAWBERRY', 120, 'product-2.jpg', 'Description OK', 2, 2),
-(20, 'CARROTS', 120, 'product-7.jpg', 'Description OK', 2, 2),
-(21, 'FRUIT JUICE', 120, 'product-8.jpg', 'Description OK', 2, 3),
-(6, 'ORANGE JUICE', 120, 'product-8.jpg', 'Description OK', 2, 3),
-(17, 'TOMATOE', 80, 'product-5.jpg', 'Description OK', 1, 2),
-(18, 'BROCOLLI', 120, 'product-6.jpg', 'Description OK', 1, 1),
-(16, 'PURPLE CABBAGE', 120, 'product-4.jpg', 'Description OK', 1, 1);
+(1, 'BELL PEPPER', 80, 'fruits-1.jpg', 'Description OK', 1, 2),
+(2, 'STRAWBERRY', 120, 'fruits-2.jpg', 'Description OK', 2, 2),
+(3, 'GREEN BEANS', 120, 'vegetables-1.jpg', 'Description OK', 1, 1),
+(4, 'PURPLE CABBAGE', 120, 'vegetables-2.jpg', 'Description OK', 1, 1),
+(5, 'TOMATOE', 80, 'fruits-3.jpg', 'Description OK', 1, 2),
+(7, 'BROCOLLI', 120, 'vegetables-3.jpg', 'Description OK', 1, 1),
+(8, 'CARROTS', 120, 'fruits-4.jpg', 'Description OK', 2, 2),
+(9, 'FRUIT JUICE', 120, 'juice-1.jpg', 'Description OK', 2, 3),
+(10, 'ONION', 80, 'dried-1.jpg', 'Description OK', 2, 4),
+(11, 'APPLE', 120, 'fruits-5.jpg', 'Description OK', 2, 2),
+(12, 'GARLIC', 120, 'dried-2.jpg', 'Description OK', 3, 4),
+(13, 'CHILLI', 120, 'vegetables-4.jpg', 'Description OK', 3, 1),
+(14, 'APRICOTS', 80, 'dried-3.jpg', 'Description OK', 1, 4),
+(15, 'COCONUT JUICE', 120, 'juice-3.jpg', 'Description OK', 2, 3),
+(19, 'LEMON & GINGER GREEN JUICE', 120, 'juice-4.jpg', 'Description OK', 2, 3),
+(20, 'DRIED APPLES', 120, 'dried-5.jpg', 'Description OK', 2, 4),
+(21, 'APPLE POMEGRANATE JUICE', 120, 'juice-5.jpg', 'Description OK', 2, 3),
+(6, 'ORANGE JUICE', 120, 'juice-2.jpg', 'Description OK', 2, 3),
+(17, 'BANANA', 80, 'fruits-6.jpg', 'Description OK', 1, 2),
+(18, 'DRIED RASPBERRIES', 120, 'dried-4.jpg', 'Description OK', 1, 4),
+(16, 'SQUASH', 120, 'vegetables-5.jpg', 'Description OK', 1, 1);
 
 -- --------------------------------------------------------
 
