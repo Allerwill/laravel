@@ -4,6 +4,7 @@
     <list default="true" id="de427fc5-df94-4aae-baec-1ca8ddabc805" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/product-single.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product-single.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/views/c4628c67a300ebef94294711a69ecaa96297f98b.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/c4628c67a300ebef94294711a69ecaa96297f98b.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -132,7 +133,7 @@
   <component name="ProjectId" id="1RSEqUC8lvtUGZErglgklXanYYb" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../41-cms-t2" />
     <property name="settings.editor.selected.configurable" value="Symfony2.SettingsForm" />
   </component>
   <component name="RunDashboard">
@@ -178,7 +179,8 @@
       <workItem from="1571586642923" duration="72000" />
       <workItem from="1571626397590" duration="4313000" />
       <workItem from="1571993907247" duration="5309000" />
-      <workItem from="1572071673238" duration="9077000" />
+      <workItem from="1572071673238" duration="11411000" />
+      <workItem from="1572104294962" duration="1660000" />
     </task>
     <servers />
   </component>
