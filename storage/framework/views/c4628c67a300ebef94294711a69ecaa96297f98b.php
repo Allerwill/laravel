@@ -10,23 +10,53 @@
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href=" css/open-iconic-bootstrap.min.css ">
+
+
+
     <link rel="stylesheet" href=" css/animate.css ">
 
+
+
     <link rel="stylesheet" href=" css/owl.carousel.min.css ">
+
+
+
     <link rel="stylesheet" href=" css/owl.theme.default.min.css ">
+
+
+
     <link rel="stylesheet" href=" css/magnific-popup.css ">
+
+
 
     <link rel="stylesheet" href=" css/aos.css ">
 
+
+
     <link rel="stylesheet" href=" css/ionicons.min.css ">
 
+
+
     <link rel="stylesheet" href=" css/bootstrap-datepicker.css ">
+
+
+
     <link rel="stylesheet" href=" css/jquery.timepicker.css ">
 
 
+
+
     <link rel="stylesheet" href=" css/flaticon.css ">
+
+
+
     <link rel="stylesheet" href=" css/icomoon.css ">
+
+
+
     <link rel="stylesheet" href=" css/style.css ">
+
+
 </head>
 <body class="goto-here">
 <div class="py-1 bg-primary">
@@ -59,15 +89,15 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a href="<?php echo e(url('/index')); ?>" class="nav-link">Home</a></li>
+                <li class="nav-item active"><a href="<?php echo e(url('/index'), false); ?>" class="nav-link">Home</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown04">
-                        <a class="dropdown-item" href="<?php echo e(url('/shop')); ?>">Shop</a>
-                        <a class="dropdown-item" href="<?php echo e(url('/wishlist')); ?>">Wishlist</a>
-                        <a class="dropdown-item" href="<?php echo e(url('/product-single')); ?>">Single Product</a>
-                        <a class="dropdown-item" href="<?php echo e(url('/cart')); ?>">Cart</a>
-                        <a class="dropdown-item" href="<?php echo e(url('/checkout')); ?>">Checkout</a>
+                        <a class="dropdown-item" href="<?php echo e(url('/shop'), false); ?>">Shop</a>
+                        <a class="dropdown-item" href="<?php echo e(url('/wishlist'), false); ?>">Wishlist</a>
+                        <a class="dropdown-item" href="<?php echo e(url('/product-single'), false); ?>">Single Product</a>
+                        <a class="dropdown-item" href="<?php echo e(url('/cart'), false); ?>">Cart</a>
+                        <a class="dropdown-item" href="<?php echo e(url('/checkout'), false); ?>">Checkout</a>
                     </div>
                 </li>
                 <li class="nav-item"><a href="about" class="nav-link">About</a></li>
